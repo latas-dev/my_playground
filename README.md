@@ -1,3 +1,3 @@
-# Data Structures and Algorithms
+# Playing
 
-This is a repository for uploading all of my data structures and algorithms exercises mainly on the C programming Language.
+This is a repository meant to archive all the random tesing and playing I do to experiment with languages and certain topics.

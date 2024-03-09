@@ -14,13 +14,12 @@ struct Rectangle {
 int main() {
 
     struct Rectangle rect1;
-    rect1.length = 10;
-    rect1.width = 20;
+    rect1.length = 5;
+    rect1.width = 10;
 
     /* C */
-    // Rectangle rect1 = {10, 20};
+    // Rectangle rect1 = {5, 10};
 
-
-    printf("%d, %d", rect1.length, rect1.width);
+    printf("The area of the rectangle is: %d", rect1.length * rect1.width);
 
 }
