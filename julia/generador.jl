@@ -17,13 +17,12 @@ function GeneracionMixta(gen::Generador)
         Printf.@printf("%2d\t%2d\t", i, xn)
         xn = (gen.a * xn + gen.c) % gen.m
         Printf.@printf("%2d\t%2d/%2d\n", xn, xn, gen.m)
-        println(rect)
-        if xn == gen.x0
+        if xn == gen.x0 && i != gen.m
             println("\nEl periodo es incompleto y los números rectangulares son rechazados.")
             return 0
         end
     end
-    if xn == gen.x0 && i != m
+    if xn == gen.x0
         println("\nEl periodo es completo y los números rectangulares son aceptados.")
     else
         println("\nEl periodo es incompleto y los números rectangulares son rechazados.")
@@ -52,7 +51,7 @@ function GeneracionMultiplicativa(gen::Generador)
 end
 
 # config_1 = Generador(8, 15, 16, 100)
-config_2 = Generador(5, 5, 0, 32)
+config = Generador(9, 8, 13, 32)
 
-# GeneracionMixta(config)
-GeneracionMultiplicativa(config_2)
+GeneracionMixta(config)
+# GeneracionMultiplicativa(config_2)
