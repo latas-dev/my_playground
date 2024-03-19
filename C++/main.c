@@ -1,13 +1,28 @@
 #include <iostream>
+#include <vector>
 
 int main(int argc, char **argv) {
 
-    int age = 33;
-    std::string first_name = "Pedro";
-    std::string last_name = "Alvarez";
-    std::string full_name = first_name + " " + last_name;
+    int class_amount = 0;
+    std::string buffer;
+    std::vector<std::string> names;
 
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << "My name is " << full_name << ", nice to meet you!" << std::endl;
-    std::cout << "I'm " << age << " years old." << std::endl;
+
+    std::cout << "How many people are in your class?" << std::endl;
+    std::cin >> class_amount;
+
+    for(int i = 0; i < class_amount; i++) {
+        std::cout << "Add name " << i+1 << ": ";
+        std::cin >> buffer;
+        names.push_back(buffer);
+    }
+
+    // for(int i = 0; i < class_amount; i++) {
+    // for(size_t i = 0; i < names.size(); i++) {
+    // for(std::string name : names) {
+    for(auto name : names) {
+        std::cout << name << std::endl;
+    }
+
+    return 0;
 }
