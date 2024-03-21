@@ -17,7 +17,7 @@ void Course::addList(const std::vector<Student>& list) {
     }
 }
 
-const std::string Course::getName() const {
+const std::string& Course::getName() const {
     return n_name;
 }
 
@@ -25,15 +25,15 @@ void Course::addFromFile(const std::string& filename) {
     std::ifstream input(filename);
 
     if(input.is_open()) {
-        std::string first, last;
         int id;
+        std::string first, last;
         float average;
 
         // while(std::getline(input, line)) {
-        while(input >> first) {
-            input >> last >> id >> average;
+        while(input >> id) {
+            input >> first >> last >> average;
 
-            Course::addStudent(Student(first, last, id, average));
+            Course::addStudent(Student(id, first, last, average));
         } 
 
         input.close();
@@ -46,8 +46,23 @@ void Course::addFromFile(const std::string& filename) {
 
 }
 
+void Course::createCourseFile(const std::string& filename) const {
+    std::ofstream output(filename);
+
+    output << n_name << std::endl;
+
+    for(const Student& student : n_list) {
+        output  << student.getId()      << " " 
+                << student.getName()    << " " 
+                << student.getAverage() << std::endl;
+    }
+    output.close();
+}
+
 void Course::printStudents() const {
     for(const Student& student : n_list) {
-        std::cout << student.getName() << "\t" << student.getId() << "\t" << student.getAverage() << "\n";
+        std::cout   << student.getId()      << " " 
+                    << student.getName()    << " " 
+                    << student.getAverage() << "\n";
     }
 }

@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
     my_course.addFromFile("./test/students.txt");
 
     my_course.printStudents();
+    my_course.createCourseFile("./test/math101.txt");
 
     return 0;
 }

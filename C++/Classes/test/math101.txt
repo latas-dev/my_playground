@@ -1,0 +1,6 @@
+MATH 101
+20001 Pedro Armendariz 3.4
+20003 Juan Lurigancho 3.2
+20010 Miguel Lopez 2.9
+20011 Antonio Padua 3.8
+20030 Bernardo O'Higgins 2.5

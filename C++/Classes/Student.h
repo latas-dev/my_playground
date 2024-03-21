@@ -4,19 +4,19 @@
 #include <string>
 
 class Student {
+    int n_id;
     std::string n_first;
     std::string n_last;
-    int n_id;
     float n_average;   
 
 public:
 
     Student();
-    Student(std::string first, std::string last, int id, float average);
+    Student(int id, std::string first, std::string last, float average);
 
-    float getAverage() const;
-    int getId() const;
-    std::string getName() const;
+    const int getId() const;
+    const std::string getName() const;
+    const float getAverage() const;
 };
 
 #endif

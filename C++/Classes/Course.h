@@ -17,8 +17,9 @@ public:
 
     void addStudent(const Student& student);
     void addList(const std::vector<Student>& list);
-    const std::string getName() const;
+    const std::string& getName() const;
     void addFromFile(const std::string& filename);
+    void createCourseFile(const std::string& filename) const;
     void printStudents() const;
 
 };
