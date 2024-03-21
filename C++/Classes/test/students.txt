@@ -1,0 +1,5 @@
+Pedro Armendariz    20001   3.4
+Juan Lurigancho     20003   3.2
+Miguel Lopez        20010   2.9
+Antonio Padua       20011   3.8
+Bernardo O'Higgins  20030   2.5 

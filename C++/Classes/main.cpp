@@ -1,9 +1,6 @@
 #include "Student.h"
 #include "Course.h"
 #include <iostream>
-#include <vector>
-#include <fstream>
-#include <string>
 
 int main(int argc, char **argv) {
     // PLAYING WITH FILE IO
@@ -25,7 +22,10 @@ int main(int argc, char **argv) {
     // }
     // input.close();
 
+    Course my_course("MATH 101");
+    my_course.addFromFile("./test/students.txt");
 
+    my_course.printStudents();
 
     return 0;
 }
