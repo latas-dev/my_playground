@@ -42,8 +42,6 @@ void Course::addFromFile(const std::string& filename) {
         std::cerr << "Error opening files" << std::endl;
         // return 1;
     }
-
-
 }
 
 void Course::createCourseFile(const std::string& filename) const {
